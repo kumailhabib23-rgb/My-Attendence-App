@@ -1,23 +1,11 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, Text, View } from 'react-native';
 
 const DashboardScreen = () => {
   return (
-    <SafeAreaView
-      edges={['left', 'right']}
-      style={styles.container}
-    >
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContent}
-      >
+    <View style={styles.container}>
+      <View style={styles.scrollContent}>
         {/* Header */}
         <View style={styles.headerCard}>
           <View style={styles.headerTopRow}>
@@ -111,8 +99,8 @@ const DashboardScreen = () => {
             <Text style={styles.label}>Attendance Rate</Text>
           </View>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+      </View>
+    </View>
   );
 };
 
@@ -120,7 +108,6 @@ export default DashboardScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#F4F7FC',
   },
 

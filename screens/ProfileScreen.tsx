@@ -1,11 +1,10 @@
-import DashboardCard from '@/components/DashboardCard';
-import DashboardChart from '@/components/DashboardChart';
+import AttendanceScreen from '@/components/AttendenceClass';
 import Header from '@/components/header';
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const HomeScreen = () => {
+const Profile = () => {
   return (
     <SafeAreaView style={styles.container}>
           <Header />
@@ -13,17 +12,13 @@ const HomeScreen = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.content}
       >
-      
-        <DashboardCard />
-        <DashboardChart />
+    
+        <AttendanceScreen />
       </ScrollView>
     </SafeAreaView>
   );
 };
-
-export default HomeScreen;
-
-const styles = StyleSheet.create({
+const styles =({
   container: {
     flex: 1,
     backgroundColor: '#F6F7FB',
@@ -35,4 +30,4 @@ const styles = StyleSheet.create({
     paddingTop: 8,
   },
 });
-
+export default Profile;

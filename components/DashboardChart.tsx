@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const attendanceData = [
   {
@@ -54,9 +48,8 @@ const attendanceData = [
 
 const AttendanceChart = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.card}>
+    <View style={styles.container}>
+      <View style={styles.card}>
           <Text style={styles.heading}>
             Class-wise Attendance Today
           </Text>
@@ -90,8 +83,7 @@ const AttendanceChart = () => {
             </View>
           ))}
         </View>
-      </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -99,7 +91,6 @@ export default AttendanceChart;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#F3F3F3',
     padding: 14,
   },
